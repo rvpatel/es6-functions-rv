@@ -1,0 +1,19 @@
+Creating a objects with a spread operator
+
+… push one object to another
+
+<script type="text/javascript">
+  const daytime = {
+      breakfast : "Mengoes",
+      Lunch : "Dal Fry"
+  }
+
+  const nighttime = "mac and cheese";
+
+  const backpackingMeals = {
+    ...daytime,
+    nighttime
+  }
+
+  console.log(backpackingMeals);
+</script>

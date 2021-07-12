@@ -1,0 +1,41 @@
+<script type="text/javascript">
+  for (let letter of "javascript") {
+    console.log(letter);
+  }
+
+  let topics = ["javascript","react","css"];
+  for (let topic of topics) {
+    console.log(topic);
+  }
+
+
+  let topics1 = new Map();
+
+  topics1.set("Html","/topic.html");
+  topics1.set("CSS","/css.html");
+  topics1.set("javascript","/js.html");
+  
+
+  for (let topic of topics1) {
+    console.log(topic);
+  }
+  
+  //get keys
+
+  for (let topic of topics1.keys()) {
+    console.log(topic);
+  }
+
+  //get values
+
+  for (let topic of topics1.values()) {
+    console.log(topic);
+  }
+
+  //get all entries
+  
+  for (let topic of topics1.entries()) {
+    console.log(topic);
+  }
+
+</script>

@@ -1,0 +1,27 @@
+<script type="text/javascript">
+  function skier(name, sound) {
+    return {
+      name: name,
+      sound: sound,
+      powerYell: function() {
+        let yell = this.sound.toUpperCase();
+        console.log(`${yell}! ${yell}!`);
+      }
+    };
+  }
+  skier('Sendy', 'woo').powerYell();
+
+  //Easy to pass a value without (:), when argument and varible same not need to pass :
+  function skier1(name, sound) {
+    return {
+      name,
+      sound,
+      powerYell: function() {
+        let yell = this.sound.toUpperCase();
+        console.log(`${yell}! ${yell}!`);
+      }
+    };
+  }
+
+  skier1('Sendy', 'woo').powerYell();
+</script>

@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  class Vehicle {
+    constructor (descripion, wheels) {
+      this.descripion = descripion;
+      this.wheels = wheels;
+
+    }
+    describeYourself() {
+      console.log(
+        `I am a ${this.descripion} with ${this.wheels} wheels.`
+      );
+    }
+
+  }
+    let coolSkivan  = new Vehicle("cool ski van",4);
+    console.log(coolSkivan);
+    coolSkivan.describeYourself();
+
+
+    //Inheritance with javascript classes
+
+  class Semitruck extends Vehicle{
+    constructor(){
+      super('AAA',18);
+    }
+  }
+
+    let groceryStoremini = new Semitruck();
+    groceryStoremini.describeYourself();
+
+</script>
