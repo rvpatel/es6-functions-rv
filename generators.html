@@ -1,0 +1,14 @@
+<script type="text/javascript">
+  function* directors(){
+    yield "Three";
+    yield "Two";
+    yield "One";
+    yield "Now action time";
+  }
+  let countdown = directors();
+  console.log(countdown.next());
+  console.log(countdown.next());
+  console.log(countdown.next());
+  console.log(countdown.next());
+  console.log(countdown.next()); // done - true
+</script>

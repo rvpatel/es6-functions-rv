@@ -1,0 +1,18 @@
+<script type="text/javascript">
+  let attendance = {
+    _list: [],
+    set addName(name){
+      this._list.push(name);
+    },
+    get list(){
+      return this._list.join(", ");
+    }
+  }
+
+  attendance.addName = "Luice Phillips";
+  console.log(attendance);
+  attendance.addName = "John deo";
+  attendance.addName = "Ravikumar";
+
+  console.log(attendance.list);
+</script>

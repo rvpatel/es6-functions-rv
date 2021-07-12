@@ -1,0 +1,68 @@
+<script type="text/javascript">
+  let studentList = function(students){
+  console.log(students);
+}
+studentList(["A","B","c"]);
+
+
+let studentList1 = (students)=>{
+  console.log(students);
+}
+studentList1(["A","B","c","D"]);
+
+
+
+let list = ["apple","banana","charry"];
+list.map(function (item){
+  console.log(item);
+});
+
+
+let list1 = ["apple","banana","charry"];
+list1.map((item)=>{
+  console.log(item);
+});
+
+
+//Understanding this in arrow functions
+
+let person = {
+  first : "Angie",
+  hobbies : ["bike","motor","ski"],
+  printHobbies : function() {
+    this.hobbies.forEach(function (hobby) {
+      let string = `${this.first} like to ${hobby}`;
+      console.log(string);
+    });
+  }
+}
+person.printHobbies();
+
+
+let person1 = {
+  first : "Angie",
+  hobbies : ["bike","motor","ski"],
+  printHobbies : function() {
+    let _this = this;
+    this.hobbies.forEach(function (hobby) {
+      let string = `${_this.first} like to ${hobby}`;
+      console.log(string);
+    });
+  }
+}
+person1.printHobbies();
+
+
+
+let person2 = {
+  first : "Angie",
+  hobbies : ["bike","motor","ski"],
+  printHobbies : function() {
+    this.hobbies.forEach((hobby)=> {
+      let string = `${this.first} like to ${hobby}`;
+      console.log(string);
+    });
+  }
+}
+person2.printHobbies();
+</script>
