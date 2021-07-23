@@ -1,0 +1,94 @@
+1. Bind - function curring usign bind method create a multiple methiods.
+
+<br>
+<br>
+
+2. Closer - You can use preset values x in inner second function
+<br>
+<br>
+
+https://www.youtube.com/watch?v=75W8UPQ5l7k
+
+3. Call, Apply and Bind functions
+
+Call :- function borrowing
+
+
+
+<script type="text/javascript">
+  // 1. Bind - function curring usign bind method create a multiple methiods.
+
+  // 2. Closer
+
+let multiply = function (x,y){
+  console.log(x*y);
+}
+
+//This function same like bealow single line function
+/*let multiplyByTwo = function(Y){
+  let x = 2;
+  console.log(x*y);
+}
+
+let multiplyByTwo = multiply.bind(this,2);
+*/
+
+
+/*
+  in argument last values is for Y
+  let multiplyByTwo = multiply.bind(this,2,3);  
+  or
+  multiplyByTwo(2,3);
+*/
+let multiplyByTwo = multiply.bind(this,2);
+multiplyByTwo(3);
+
+let multiplyByThree = multiply.bind(this,3);
+multiplyByThree(5);
+
+
+/*
+  Closer
+  You can use preset values x in second function
+*/
+
+let multiply1 = function (x){
+  return function(y){
+    console.log(x*y);
+  }
+}
+
+// Remove a bind function and pass direct argument
+let multiplyByTwo1 = multiply1(2);
+multiplyByTwo1(3);
+
+
+
+//Call fucntion : - invoke a fucntion passing directily argument by comma sperated
+let name = {
+  firstname : "ravi",
+  lastname : "kumar",
+  printFullName : function(hometown, state){
+    console.log(this.firstname + " " +this.lastname + " from " + hometown + " " + state);
+  }
+}
+name.printFullName("Ahmedabad","Guj");
+
+let name2 = {
+  firstname : "Rv",
+  lastname : "Patel",
+}
+//fucntion borrowing
+name.printFullName.call(name2,"Mumbai","Mah");
+
+//Apply method => pass value as a array list []
+name.printFullName.apply(name2,["A","B"]);
+
+//Bind methord : does not invoke direct but fucntion retun inoke later
+
+let printmyname = name.printFullName.bind(name2,"Mumbai","Mah");
+//return a full fucntion
+console.log(printmyname);
+printmyname();
+
+</script>
