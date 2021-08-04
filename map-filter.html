@@ -1,0 +1,145 @@
+<script type="text/javascript">
+  const arr = [5,1,3,2,6]
+  //double - [10,2,6,4,12]
+  //binary - ["101","1","11","10","110"]
+
+  function double(x){
+      return x * 2;
+  }
+
+  function triple(x){
+      return x * 3;
+  }
+
+  function binary(x){
+      return x .toString(2);
+  }
+
+  const output = arr.map(binary);
+
+  console.log(output);
+
+
+  //binary and and function renduring both are same.
+  //not need {} when s single line function.
+  // not need to write return text there
+
+  const output1 = arr.map((x)=> x.toString(2));
+  console.log(output1);
+
+
+
+ //filter for the values like odd or even / divede by 3
+
+ const arr1 = [5,1,3,2,6]
+//filter odd values 
+
+function isOdd(x){
+  return x % 2;  
+}
+
+const output2 = arr1.filter(isOdd);
+console.log(output2);
+
+function isEven(x){
+  return x % 2 === 0;  
+}
+const output3 = arr1.filter(isEven);
+console.log(output3);
+
+const output4 = arr1.filter((x) => x > 4);
+console.log(output4);
+
+
+
+
+
+
+//reduce : - is for a get a single value of array
+
+const arr2 = [5,1,3,2,6]
+//sum or max
+
+function findSum(arr2){
+  let sum = 0;
+  for (let i = 0; i < arr2.length; i++){
+    sum = sum + arr2[i];
+  }
+  return sum;
+}
+
+console.log(findSum(arr2));
+
+
+// how to transform above fucntion sum and use reduce there have a 2 arguments
+// acc  : - accumaliting  (store the result) like sum
+// curr : - pass one by one current value like arr2[i]
+// ,0 : - is a pass a default value of acc
+
+const output5 = arr2.reduce(function(acc, curr){
+  acc = acc + curr;
+  return acc;
+},0);
+
+console.log(output5);
+
+
+//return a max value using a reduce
+const output6 = arr2.reduce(function(max, curr){
+      if (curr > max) {
+          max = curr;
+      }
+      return max;
+},0 );
+console.log(output6)
+
+
+
+const users = [
+    { firstName: "Ravikumar", lastName:"Patel", age: 26},
+    { firstName: "Hazy", lastName:"mehuriya", age: 75},
+    { firstName: "Harry", lastName:"Patel", age: 50},
+    { firstName: "Harshal", lastName:"mehuriya", age: 26},
+];
+
+// List of full name by map fucntion {26: 2, 50: 1, 75: 1}
+
+const output7 = users.map((x) => x.firstName + " " + x.lastName);
+console.log(output7);
+
+// Age count  : reduce array of object
+const output8 = users.reduce(function(acc, curr){
+  if(acc[curr.age]){
+    acc[curr.age] = ++acc[curr.age];
+  }else{
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
+console.log(output8);
+
+
+
+//filter userlist which is return a object default so whats you do for a get single names
+
+const output9 = users.filter(x => x.age < 30);
+console.log(output9);
+
+
+// you can use map with filter for get object single value
+
+const output10 = users.filter(x => x.age < 30).map((x) => x.firstName)
+console.log(output10);
+
+// how to get usign a reduce
+
+const output11 = users.reduce(function(acc, curr){
+    if(curr.age < 30){
+      //acc.push(curr.firstName);
+      acc=[...acc,curr.firstName]
+    }
+    return acc;
+}, []);
+
+console.log(output11);
+</script>
