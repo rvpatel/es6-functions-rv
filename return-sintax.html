@@ -1,0 +1,45 @@
+Why the first one returns 'undefined'?
+
+Because of Automatic Semicolon Insertion.
+
+JS assumes a “;” in some places in your JS code, even if you didn’t write one there.
+
+In the first function JS adds a semicolon after 'return', so the function becomes:
+
+<code>
+function getSuperhero() {
+return; // -> return (undefined);
+{
+name: 'Superman'
+};
+}
+</code>
+
+<style>
+  code {
+    font-family: Consolas, "courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    font-size: 105%;
+  }
+</style>
+
+<script type="text/javascript">
+  function getSuperhero() {
+    return
+    {
+        name: 'Superman'
+    }
+}
+console.log(getSuperhero())
+
+function getSuperhero1() {
+    return {
+        name: 'Superman'
+    }
+}
+getSuperhero1()
+
+console.log(getSuperhero1())
+
+</script>

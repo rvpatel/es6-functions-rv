@@ -1,0 +1,37 @@
+<p>In JavaScript .sort() orders the array alphabetically.</p>
+
+<p>The solution to achieve a numeric sort is passing a comparison function to the .sort() method as a parameter.</p>
+
+<p>Also, the .sort() method sorts the array in-place (mutates the original array),</p>
+
+<p>so we should make a copy while sorting by using the syntax <code>[...array].sort()</code>.</p>
+
+<p>If speed is really important, we can use a TypedArray.</p>
+
+<p>Did you know about sorting using TypedArray such as Int32Array? 👇🏽</p>
+
+
+
+<script>
+  const numbers = [40, 100, 1, 5, 25, 10];
+console.log(numbers.sort());
+
+
+const numbers1 = [40, 100, 1, 5, 25, 10];
+const copynumbers = new Int32Array(numbers1);
+
+
+console.log(copynumbers.sort());
+
+
+const numbers2 = [40, 100, 1, 5, 25, 10];
+const ascSortedNumbers = [...numbers].sort((a, b) => a - b);
+
+console.log(ascSortedNumbers);
+
+const descSortedNumbers = [...numbers].sort((a, b) => b - a);
+
+console.log(descSortedNumbers);
+
+
+</script>
