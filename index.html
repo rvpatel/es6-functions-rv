@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <style>
+      #box {
+        display: flex;
+        justify-content: space-around;
+      }
 
-  <style>
-    #box {
-      display: flex;
-      justify-content: space-around;
-    }
+      #box > div {
+        height: 5em;
+        width: 5em;
+        background-color: purple;
+      }
+    </style>
+  </head>
 
-    #box>div {
-      height: 5em;
-      width: 5em;
-      background-color: purple;
-    }
-  </style>
-</head>
+  <body>
+    <h1>Let Keyword</h1>
+    <div id="box"></div>
+    <ul>
+      <li><a href="/const.html">Const</a></li>
+      <li><a href="/string.html">String</a></li>
+      <li><a href="/searchstring.html">Seach String</a></li>
+      <li><a href="/usingsimbol.html">Using Simbol</a></li>
+      <li><a href="/map.html">Map function</a></li>
+      <li><a href="/spread.html">Spread Operator</a></li>
+      <li><a href="/destructuring-array.html">Destructuring Array</a></li>
+      <li><a href="/searching-array.html">Searching array</a></li>
+      <li>
+        <a href="/enhancing-object-literals.html">Enhancing object literals</a>
+      </li>
+      <li><a href="/objects-with-spread.html">objects with a spread</a></li>
+      <li><a href="/forloop.html">Interacting with the for/of loop</a></li>
+      <li><a href="/introducing-classes.html">Introducing classes</a></li>
+      <li><a href="/class-values.html">Getting and setting class values</a></li>
+      <li>
+        <a href="/string-repeate.html">Using a siring.repeat() function</a>
+      </li>
+      <li>
+        <a href="/function-arguments.html"
+          >Setting default function parameters</a
+        >
+      </li>
+      <li><a href="/arrow-function.html">Arrow Function</a></li>
+      <li><a href="/generators.html">Working with generators</a></li>
+      <li><a href="/building-promises.html">Building Promises</a></li>
+      <li><a href="/async-await.html">async/await syntax</a></li>
+      <li>
+        <a href="/currying.html">Call, Bind, Apply + Currying in Javascript</a>
+      </li>
+      <li><a href="/map-filter.html">Map filter reduce</a></li>
+    </ul>
 
-<body>
-  <h1>Let Keyword</h1>
-  <div id="box"></div>
-  <ul>
-    <li><a href="/const.html">Const</a></li>
-    <li><a href="/string.html">String</a></li>
-    <li><a href="/searchstring.html">Seach String</a></li>
-    <li><a href="/usingsimbol.html">Using Simbol</a></li>
-    <li><a href="/map.html">Map function</a></li>
-    <li><a href="/spread.html">Spread Operator</a></li>
-    <li><a href="/destructuring-array.html">Destructuring Array</a></li>
-    <li><a href="/searching-array.html">Searching array</a></li>
-    <li><a href="/enhancing-object-literals.html">Enhancing object literals</a></li>
-    <li><a href="/objects-with-spread.html">objects with a spread</a></li>
-    <li><a href="/forloop.html">Interacting with the for/of loop</a></li>
-    <li><a href="/introducing-classes.html">Introducing classes</a></li>
-    <li><a href="/class-values.html">Getting and setting class values</a></li>
-    <li><a href="/string-repeate.html">Using a siring.repeat() function</a></li>
-    <li><a href="/function-arguments.html">Setting default function parameters</a></li>
-    <li><a href="/arrow-function.html">Arrow Function</a></li>
-    <li><a href="/generators.html">Working with generators</a></li>
-    <li><a href="/building-promises.html">Building Promises</a></li>
-    <li><a href="/async-await.html">async/await syntax</a></li>
-    <li><a href="/currying.html">Call, Bind, Apply + Currying in Javascript</a></li>
-    <li><a href="/map-filter.html">Map filter reduce</a></li>
-  </ul>
+    <h2>Small code with new learning</h2>
+    <ul>
+      <li>
+        <a href="/return-sintax.html"
+          >be aware of Automatic Semicolon Insertion</a
+        >
+      </li>
+      <li>
+        <a href="/sort-order.html">.sort() orders the array alphabetically.</a>
+      </li>
+    </ul>
+  </body>
 
-  <h2>Small code with new learning</h2>
-  <ul>
-    <li><a href="/return-sintax.html">be aware of Automatic Semicolon Insertion</a></li>
-    <li><a href="/sort-order.html">.sort() orders the array alphabetically.</a></li>
-  </ul>
-</body>
-
-<script type="text/javascript">
-  var div;
+  <script type="text/javascript">
+    var div;
     var box = document.getElementById('box');
 
     /*when we use let return a index value and when we use var return last value*/
@@ -70,11 +85,10 @@
     for (let i = 0; i < 5; i++) {
       div = document.createElement('div');
 
-      div.onclick = function() {
+      div.onclick = function () {
         console.log(i);
       };
       box.appendChild(div);
     }
-</script>
-
+  </script>
 </html>
